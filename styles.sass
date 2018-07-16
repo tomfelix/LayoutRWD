@@ -1,0 +1,87 @@
+$navHeight: 40px
+$headerHeight: 100px
+$bodyHeight: 300px
+$footerHeight: 40px
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  max-height: $bodyHeight
+  background-color: #93afbf
+
+.topnav
+  overflow: hidden
+  background-color: black
+  position: fixed
+  line-height: $navHeight / 2
+  top: 0
+  width: 100%
+  min-height: $navHeight
+
+.topnav a
+  float: left
+  display: block
+  background-color: black
+  color: white
+  text-align: center
+  padding: 14px 16px
+  text-decoration: none
+  &:hover
+    background-color: white
+    color: black
+
+.header
+  background-color: #F1F1F1
+  text-align: center
+  margin-top: $navHeight
+  min-height: $headerHeight
+  padding: $headerHeight 0
+
+.column-left
+  margin-top: 20px
+  float: left
+  width: 75%
+  padding: 10px
+
+.column-right
+  margin-top: 20px
+  float: left
+  width: 25%
+  padding: 10px
+
+.card
+  padding: 10px
+  background-color: white
+
+.fakeimg
+  background-color: #aaa
+  max-width: 50%
+
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+.footer
+  width: 100%
+  background-color: #F1F1F1
+  text-align: center
+  padding: 10px
+  min-height: $footerHeight
+  margin-top: $bodyHeight - $footerHeight
+
+@media screen and (max-width: 800px)
+  .column-left, .column-right
+    width: 100%
+    padding: 10px
+
+@media screen and (max-width: 400px)
+  .topnav a
+    float: none
+    width: 100%
+    padding: 10px
+
+  .header
+    margin-top: $navHeight * 3
